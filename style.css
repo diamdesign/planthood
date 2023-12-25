@@ -2,10 +2,14 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: "Open Sans", sans-serif;
 }
 
+html {
+	scroll-behavior: smooth;
+}
 body {
+	font-size: 16px;
 	background-color: #fcf5fc;
 	display: flex;
 	justify-content: center;
@@ -13,8 +17,9 @@ body {
 
 section {
 	background-color: white;
-	box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.1), 0 5px 4px 0px rgba(0, 0, 0, 0.1);
 	width: 1000px;
+	margin-bottom: 60px;
 }
 
 header {
@@ -39,6 +44,7 @@ header div:nth-child(3) {
 }
 
 menu {
+	font-family: "Maven Pro", sans-serif;
 	overflow: hidden;
 	box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
 	display: flex;
@@ -48,11 +54,17 @@ menu {
 }
 
 menu a {
-	padding: 20px;
+	padding: 20px 20px 17px 20px;
 	text-transform: uppercase;
 	color: #055647;
 	text-decoration: none;
 	font-weight: 600;
+	border-bottom: 3px solid white;
+}
+
+menu a:hover {
+	color: black;
+	border-bottom: 3px solid black;
 }
 
 .topinfo {
@@ -70,8 +82,12 @@ menu a {
 }
 .topinfoimage {
 	background-color: #0a846e;
+	background-image: url("assets/Vectorseedpackage.svg");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 194px;
 	border-radius: 1000rem;
-	width: 300px;
+	width: 377px;
 	aspect-ratio: 1/1;
 	float: left;
 	margin-right: 60px;
@@ -89,7 +105,9 @@ menu a {
 	color: #0a846e;
 	text-align: center;
 	text-transform: uppercase;
+	font-family: "Maven Pro", sans-serif;
 	font-size: 3rem;
+	font-weight: 500;
 }
 
 .topinfo h3 {
@@ -101,15 +119,45 @@ menu a {
 	margin-bottom: 20px;
 }
 
-.topinfo a {
-	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+.button {
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.35);
 	border-radius: 6px;
 	background-color: #0a846e;
-	padding: 14px 32px;
+	padding: 12px 42px;
 	text-transform: uppercase;
 	font-weight: 600;
-	font-size: 0.9rem;
+	font-size: 1.2rem;
 	color: white;
 	text-decoration: none;
+}
+
+.button:hover {
+	background-color: black;
+}
+
+.topinfo .button {
 	float: right;
+}
+
+hr {
+	display: block;
+	width: 30%;
+	margin-left: auto;
+	margin-right: auto;
+	height: 3px;
+	color: #055647;
+	background: #055647;
+}
+
+footer a {
+	display: block;
+	padding: 12px;
+	color: black;
+	font-size: 1.2rem;
+	text-align: center;
+	text-decoration: none;
+}
+
+footer a:hover {
+	text-decoration: underline;
 }
