@@ -16,6 +16,7 @@ body {
 }
 
 section {
+	display: grid;
 	overflow: hidden;
 	background-color: white;
 	box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.1), 0 5px 4px 0px rgba(0, 0, 0, 0.1);
@@ -26,6 +27,12 @@ section {
 header {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+	text-align: center;
+}
+header div {
+	display: grid;
+	align-items: center;
+	justify-content: center;
 }
 
 header div:nth-child(1) {
@@ -72,10 +79,10 @@ menu a:hover {
 	padding: 40px;
 	line-height: 1.6rem;
 }
-.topinfogrid {
+.infogrid {
 	margin-top: 60px;
 	display: grid;
-	grid-template-columns: 1fr 2fr;
+	grid-template-columns: 1fr 1fr;
 }
 
 .topinfo .info {
@@ -92,6 +99,23 @@ menu a:hover {
 	aspect-ratio: 1/1;
 	float: left;
 	margin-right: 60px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.topinfoimage2 {
+	background-color: #0a846e;
+	background-image: url("assets/plant.svg");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 149px;
+	border-radius: 1000rem;
+	width: 377px;
+	aspect-ratio: 1/1;
+	float: right;
+	margin-left: 60px;
 	text-align: center;
 	display: flex;
 	justify-content: center;
@@ -130,6 +154,18 @@ menu a:hover {
 	font-size: 1.2rem;
 	color: white;
 	text-decoration: none;
+}
+
+.btn-showmore {
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	text-transform: none;
+}
+
+.btn-plantedplants {
+	float: left !important;
+	text-transform: none !important;
 }
 
 .button:hover {
@@ -191,12 +227,15 @@ h2 {
 	font-family: "Lato", sans-serif;
 	font-size: 0.9rem;
 	align-self: center;
+	top: 8px;
+	position: relative;
 }
 
 .products figure .btn-remove {
 	text-transform: uppercase;
-	font-weight: 500;
-	padding: 6px 20px;
+	font-weight: 600;
+	padding: 4px;
+	text-align: center;
 	float: right;
 	display: block;
 	background-color: #b93857;
@@ -206,6 +245,10 @@ h2 {
 	font-family: "Open Sans", sans-serif;
 	font-size: 15px;
 	margin-top: 20px;
+}
+
+.products figure .btn-remove:hover {
+	background-color: black;
 }
 
 .products figure .image {
@@ -219,6 +262,8 @@ h2 {
 	position: absolute;
 	left: 50%;
 	height: 296px;
+	width: 100%;
+	object-fit: cover;
 	transform: translateX(-50%);
 	transform-origin: left center;
 	transition: all 0.2s ease-out;
@@ -226,6 +271,10 @@ h2 {
 
 .products figure:hover .image img {
 	scale: 1.1;
+}
+
+.products figure:hover .info h4 {
+	text-decoration: underline;
 }
 
 .products figure .image:after {
@@ -258,6 +307,67 @@ h2 {
 	grid-template-columns: 6fr 4fr;
 
 	padding: 14px;
+}
+
+.bottomgrid {
+	height: 590px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	background-image: url("https://images.unsplash.com/photo-1586281010691-f9da4be5b1f7?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	position: relative;
+}
+
+.bottomgrid h2 {
+	margin-top: 0;
+	font-family: "Maven Pro", sans-serif;
+	font-size: 64px;
+}
+
+.bottomgrid .darken {
+	width: 100%;
+	color: whitesmoke;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.8);
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.bottomgrid .bottom {
+	display: grid;
+
+	grid-template-columns: 1fr 1fr;
+	background-color: transparent !important;
+	position: absolute;
+	bottom: 40px;
+	width: 100%;
+}
+
+.bottomgrid .bottom * {
+	background-color: transparent !important;
+}
+
+.bottomgrid .telephone {
+	margin-left: 20px;
+	padding-left: 30px;
+	font-family: "Maven Pro", sans-serif;
+	font-size: 20px;
+	text-align: left !important;
+}
+
+.bottomgrid .mail {
+	margin-right: 20px;
+	text-align: right;
+	padding-right: 30px;
+	font-family: "Maven Pro", sans-serif;
+	font-size: 20px;
 }
 
 footer a {
