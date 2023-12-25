@@ -16,10 +16,11 @@ body {
 }
 
 section {
+	overflow: hidden;
 	background-color: white;
 	box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.1), 0 5px 4px 0px rgba(0, 0, 0, 0.1);
 	width: 1000px;
-	margin-bottom: 60px;
+	margin-bottom: 100px;
 }
 
 header {
@@ -144,14 +145,124 @@ hr {
 	width: 30%;
 	margin-left: auto;
 	margin-right: auto;
-	height: 3px;
+	height: 4px;
 	color: #055647;
 	background: #055647;
 }
 
+h2 {
+	margin-top: 60px;
+	text-align: center;
+	font-size: 1.6rem;
+	font-weight: 500;
+}
+
+.products {
+	margin: 40px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 20px;
+}
+
+.products figure {
+	position: relative;
+	overflow: hidden;
+	box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.products figure h4 {
+	width: 100%;
+
+	font-size: 24px;
+	font-family: "Lato", sans-serif;
+}
+
+.products figure .date {
+	align-self: flex-end;
+	font-size: 0.9rem;
+	justify-self: flex-end;
+	margin-bottom: 2px;
+	float: right;
+	font-size: 16px;
+	font-family: "Open Sans", sans-serif;
+}
+
+.products figure .by {
+	font-family: "Lato", sans-serif;
+	font-size: 0.9rem;
+	align-self: center;
+}
+
+.products figure .btn-remove {
+	text-transform: uppercase;
+	font-weight: 500;
+	padding: 6px 20px;
+	float: right;
+	display: block;
+	background-color: #b93857;
+	color: white;
+	border-radius: 8px;
+	text-decoration: none;
+	font-family: "Open Sans", sans-serif;
+	font-size: 15px;
+	margin-top: 20px;
+}
+
+.products figure .image {
+	width: 100%;
+	height: 296px;
+	overflow: hidden;
+	position: relative;
+}
+.products figure .image img {
+	top: 0;
+	position: absolute;
+	left: 50%;
+	height: 296px;
+	transform: translateX(-50%);
+	transform-origin: left center;
+	transition: all 0.2s ease-out;
+}
+
+.products figure:hover .image img {
+	scale: 1.1;
+}
+
+.products figure .image:after {
+	position: absolute;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+	content: "";
+	background-image: url("assets/plant.svg");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 50%;
+	transition: opacity 0.2s ease-in;
+	opacity: 1;
+}
+
+.products figure:hover .image:after {
+	opacity: 0;
+}
+
+.products figure:hover {
+	cursor: pointer;
+}
+
+.products figure .info {
+	display: grid;
+	grid-template-columns: 6fr 4fr;
+
+	padding: 14px;
+}
+
 footer a {
 	display: block;
-	padding: 12px;
+	padding: 18px;
 	color: black;
 	font-size: 1.2rem;
 	text-align: center;
