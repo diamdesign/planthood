@@ -55,13 +55,16 @@ menu {
 	font-family: "Maven Pro", sans-serif;
 	overflow: hidden;
 	box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
+
 	margin-bottom: 20px;
 }
 
-menu a {
+.menulinks {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.menulinks a {
 	padding: 20px 20px 17px 20px;
 	text-transform: uppercase;
 	color: #055647;
@@ -70,7 +73,7 @@ menu a {
 	border-bottom: 3px solid white;
 }
 
-menu a:hover {
+.menulinks a:hover {
 	color: black;
 	border-bottom: 3px solid black;
 }
@@ -360,14 +363,20 @@ h2 {
 	font-family: "Maven Pro", sans-serif;
 	font-size: 20px;
 	text-align: left !important;
+	background-image: url("assets/icon-phone.svg");
+	background-repeat: no-repeat;
+	background-position: left center;
 }
 
 .bottomgrid .mail {
 	margin-right: 20px;
 	text-align: right;
-	padding-right: 30px;
+	padding-right: 36px;
 	font-family: "Maven Pro", sans-serif;
 	font-size: 20px;
+	background-image: url("assets/icon-email.svg");
+	background-repeat: no-repeat;
+	background-position: right center;
 }
 
 footer a {
@@ -381,4 +390,90 @@ footer a {
 
 footer a:hover {
 	text-decoration: underline;
+}
+
+.btn-menu {
+	background-image: url("assets/icon-burger.svg");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 40px;
+	width: 42px;
+	height: 42px;
+	content: "";
+	display: Block;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	display: none;
+}
+
+.btn-menu:hover {
+	cursor: pointer;
+}
+
+@media all and (max-width: 740px) {
+	header div:nth-child(1) {
+		grid-row: 1;
+		grid-column: 1/3;
+		height: 390px;
+	}
+
+	header img {
+		width: 60% !important;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	header div:nth-child(1) img {
+		width: 200px !important;
+	}
+	header div:nth-child(2),
+	header div:nth-child(3) {
+		aspect-ratio: 1 /1;
+	}
+
+	.btn-menu {
+		display: block;
+	}
+
+	menu .menulinks {
+		display: none;
+	}
+	.infogrid {
+		grid-template-columns: 1fr;
+	}
+
+	.infogrid .button {
+		float: none;
+		margin-top: 30px;
+	}
+	.topinfo p {
+		font-size: 14px;
+		margin-bottom: 50px !important;
+	}
+
+	.topinfo h1 {
+		font-size: 24px;
+	}
+
+	.topinfo h3 {
+		font-size: 16px;
+	}
+
+	.topinfoimage,
+	.topinfoimage2 {
+		width: 240px;
+		margin-right: auto;
+		margin-left: auto;
+		background-size: 126px;
+	}
+
+	.infogrid .info {
+		text-align: center;
+		padding-bottom: 80px;
+	}
+
+	.infogrid .topinfoimage {
+		grid-row: 2/2;
+	}
 }
