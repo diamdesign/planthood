@@ -411,6 +411,69 @@ footer a:hover {
 	cursor: pointer;
 }
 
+#mypage section {
+	position: relative;
+	padding-top: 60px;
+}
+#mypage menu {
+	background-color: white;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	overflow: visible;
+}
+
+#mypage header {
+	grid-template-columns: 1fr;
+}
+
+#mypage header div:nth-child(1) {
+	height: 380px;
+	background-image: url("assets/mypage.png");
+}
+
+#mypage .add {
+	display: grid;
+}
+
+#mypage form {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	padding: 40px;
+	grid-gap: 20px;
+}
+
+#mypage form input {
+	border: none;
+	border-radius: 4px;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+	padding: 16px 20px;
+	line-height: 1rem;
+	font-size: 1rem;
+}
+
+#mypage .add .button {
+	justify-self: center;
+}
+
+#mypage .bottompics {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-gap: 10px;
+	margin-top: 40px;
+	background: #9e6d52;
+	padding: 40px;
+}
+
+#mypage .bottompics div {
+	overflow: hidden;
+	height: 277px;
+}
+
+#mypage .add h2 {
+	text-align: left;
+	padding-left: 40px;
+}
 @media all and (max-width: 740px) {
 	header div:nth-child(1) {
 		grid-row: 1;
@@ -544,5 +607,41 @@ footer a:hover {
 
 	.infogrid .button {
 		justify-self: center;
+	}
+
+	.products {
+		margin: 20px;
+	}
+	#mypage section {
+		padding-top: 0;
+	}
+	#mypage form {
+		padding: 20px;
+		grid-template-columns: 1fr;
+	}
+	#mypage .add h2 {
+		padding-left: 20px;
+	}
+
+	#mypage form label:nth-child(2) {
+		grid-row: 3;
+	}
+
+	#mypage .bottompics {
+		padding: 20px;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	#mypage .bottompics div {
+		height: 85px;
+		overflow: hidden;
+		position: relative;
+	}
+
+	#mypage .bottompics div img {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translateX(-50%) translateY(-50%);
 	}
 }
