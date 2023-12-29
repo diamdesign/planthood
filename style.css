@@ -60,11 +60,12 @@ menu {
 }
 
 .menulinks {
-	display: flex;
-	flex-wrap: wrap;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
 	justify-content: space-around;
 }
 .menulinks a {
+	text-align: center;
 	padding: 20px 20px 17px 20px;
 	text-transform: uppercase;
 	color: #055647;
@@ -473,6 +474,12 @@ footer a:hover {
 #mypage .add h2 {
 	text-align: left;
 	padding-left: 40px;
+}
+
+header img {
+	width: 80% !important;
+	margin-left: auto;
+	margin-right: auto;
 }
 @media all and (max-width: 740px) {
 	header div:nth-child(1) {
